@@ -20,7 +20,7 @@
             <img src="tk2.png">
             <a href="#" target="_blank">TarekchY.</a>
         </div>
-        <ul>
+        <ul id="menu">
             <li><a href="#main">Home</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#about">About Me</a></li>
@@ -39,6 +39,7 @@
         
         <button id="menuButton" onclick="openMenu()">
             <i class='bx bx-menu'></i>
+
         </button>
     </nav>
 
@@ -286,5 +287,13 @@
 
     <script src="script.js"></script>
 </body>
+
+<script>
+    function openMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("active");
+    }
+</script>
+
 
 </html>
