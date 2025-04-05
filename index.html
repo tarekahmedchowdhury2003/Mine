@@ -28,11 +28,9 @@
             <li><a href="#feedback">Feedback</a></li>
         </ul>
 
-        <!-- <div class="social-link">
-            <a href="https://github.com/tarekahmedchowdhury2003"><i class='bx bxl-github'></i></a>
-            <a href="https://www.linkedin.com/in/tarek-chowdhury-b94960262/"><i class='bx bxl-linkedin-square'></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
-        </div> -->
+       
+
+    
         <a href="mailto:tarekchy569@gmail.com">
             <button>Contact Me</button>
         </a>
@@ -42,6 +40,18 @@
 
         </button>
     </nav>
+
+    <div id="drawer" class="drawer">
+        <button class="closeBtn" id="closeBtn">&times;</button>
+        <ul>
+            <li><a href="#main">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="mailto:tarekchy569@gmail.com">Contact With Me</a></li>
+        </ul>
+    </div>
 
     <div class="main" id="main">
         <div class="left">
@@ -287,13 +297,25 @@
 
     <script src="script.js"></script>
 </body>
-
 <script>
-    function openMenu() {
-        const menu = document.getElementById("menu");
-        menu.classList.toggle("active");
-    }
+const menuButton = document.getElementById('menuButton');
+const drawer = document.getElementById('drawer');
+const closeBtn = document.getElementById('closeBtn');
+
+menuButton.addEventListener('click', () => {
+    drawer.classList.toggle('open');
+});
+
+closeBtn.addEventListener('click', () => {
+    drawer.classList.remove('open');
+});
+
 </script>
+
+
+  
+
+
 
 
 </html>
