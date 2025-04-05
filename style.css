@@ -688,13 +688,53 @@ footer .bottom .links a{
 
 }
 
-/* Initially hide menu on mobile */
-#menu {
-    display: none;
-    flex-direction: column;
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #181b28;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
 }
 
-/* Show it when active */
-#menu.active {
-    display: flex;
+.drawer.open {
+    right: 0;
 }
+
+.drawer .closeBtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+}
+
+.drawer ul {
+    padding: 20px 0;
+}
+
+.drawer ul li {
+    padding: 10px 0;
+}
+
+.drawer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    #menuButton {
+        display: block;
+    }
+}
+  
