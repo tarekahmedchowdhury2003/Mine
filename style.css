@@ -687,3 +687,14 @@ footer .bottom .links a{
     }
 
 }
+
+/* Initially hide menu on mobile */
+#menu {
+    display: none;
+    flex-direction: column;
+}
+
+/* Show it when active */
+#menu.active {
+    display: flex;
+}
